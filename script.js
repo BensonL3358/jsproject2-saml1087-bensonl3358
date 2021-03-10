@@ -11,8 +11,8 @@ $.ajax({
             if (data[i].borough == ("   " + userBorough)){
                 var population = (data[i]["_" + userYear])
                 var percentage = (data[i]["_" + userYear + "_boro_share_of_nyc_total"])
-                document.write("There are " + population + " people in " + userBorough + " in " + userYear + "<br>")
-                document.write("This is the percentage of the NYC Total Population: " + percentage + "% <br>")
+                document.write("There are " + population + " people in " + userBorough + " in " + userYear + ".<br>")
+                document.write("This is " + percentage + "% of the total population in NYC. <br>")
             }
         }
     }
