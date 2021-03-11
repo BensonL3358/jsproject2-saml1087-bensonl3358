@@ -14,10 +14,20 @@ $.ajax({
                 var population = (data[i]["_" + userYear]); // Grabs Property called _(userYear)
                 var percentage = (data[i]["_" + userYear + "_boro_share_of_nyc_total"]); //Grabs property called _(userYear)_boro_share_of_nyc_total
 
+                var populationStatement = ("There are " + population + " people in " + userBorough + " in " + userYear + ".") // Concatenation of Strings
+                var percentageStatement = ("This is " + percentage + "% of the total population in NYC ")
+
+                var title = "Population Grabber (NYC Boroughs)"
+
+                //HTML Portion (Document-writing)
                 document.write('<center>'); // Centers text after user inputs their answers
-                document.write("There are " + population + " people in " + userBorough + " in " + userYear + ".<br>");
-                document.write("This is " + percentage + "% of the total population in NYC. <br>");
+
+                document.write(title.fontsize(7) + "<br>")
+                document.write(populationStatement.fontsize(5) + "<br>");
+                document.write(percentageStatement.fontsize(5) + "<br>");
                 document.body.style.backgroundColor = "#add8e6"; // Changes background color after user inputs answers
+                document.body.style.color = "blue"
+
             }
         }
     }
